@@ -1,5 +1,8 @@
+import os
+
+import torch
 import torchvision.transforms as transforms  # type: ignore[import-untyped]
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, TensorDataset
 from torchvision.datasets import ImageFolder  # type: ignore[import-untyped]
 
 
@@ -7,6 +10,7 @@ def get_dataloaders(data_dir: str = "ml_cat_project/dataset/raw", batch_size: in
     """
     Returns PyTorch dataloaders for training.
     Uses data augmentation for training and only normalization for validation/test.
+    In CI (GitHub Actions), falls back to a dummy dataset.
     """
 
     train_transform = transforms.Compose([
@@ -18,10 +22,15 @@ def get_dataloaders(data_dir: str = "ml_cat_project/dataset/raw", batch_size: in
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
     ])
 
-    # Load datasets
+    if os.getenv("CI") == "true":  # running on GitHub Actions
+        # Create a tiny dummy dataset
+        X = torch.randn(16, 3, 224, 224)
+        y = torch.randint(0, 2, (16,))
+        dataset = TensorDataset(X, y)
+        loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
+        return loader, ["class0", "class1"]
+
+    # Otherwise load real dataset
     dataset = ImageFolder(data_dir, transform=train_transform)
-
-    # DataLoader
     loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
-
     return loader, dataset.classes
