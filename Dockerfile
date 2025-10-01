@@ -18,4 +18,4 @@ RUN poetry install --no-interaction --no-ansi --no-root --no-dev
 # Copy Python code to the Docker image
 COPY ml_cat_project /code/ml_cat_project/
 
-CMD [ "python", "ml_cat_project/foo.py"]
+CMD [ "python", "ml_cat_project/__main__.py" ]

@@ -5,7 +5,7 @@ site_description: A small toy project aiming to recognize cats on pictures.
 site_author: Edouard Brülhart
 edit_uri: edit/main/docs/
 repo_name: edouardbruelhart/ml-cat-project
-copyright: Maintained by <a href="https://edouardbruelhart.com">Florian</a>.
+copyright: Maintained by <a href="https://edouardbruelhart.com">Edouard</a>.
 
 nav:
   - Home: index.md
