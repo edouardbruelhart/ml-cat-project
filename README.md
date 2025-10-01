@@ -4,7 +4,6 @@
 [![Build status](https://img.shields.io/github/actions/workflow/status/edouardbruelhart/ml-cat-project/main.yml?branch=main)](https://github.com/edouardbruelhart/ml-cat-project/actions/workflows/main.yml?query=branch%3Amain)
 [![codecov](https://codecov.io/gh/edouardbruelhart/ml-cat-project/branch/main/graph/badge.svg)](https://codecov.io/gh/edouardbruelhart/ml-cat-project)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/edouardbruelhart/ml-cat-project)](https://img.shields.io/github/commit-activity/m/edouardbruelhart/ml-cat-project)
-[![License](https://img.shields.io/github/license/edouardbruelhart/ml-cat-project)](./LICENSE)
 
 A small Machine Learning toy project to learn ML principles. It aims to recognize cats on a picture.
 
