@@ -13,16 +13,18 @@ A small Machine Learning toy project to learn ML principles. It aims to recogniz
 
 ## Getting started
 
-- First clone the repository:
+- First clone the repository and install dependencies:
 
 ```bash
 git clone git@github.com:edouardbruelhart/ml-cat-project.git
+cd ml-cat-project
+poetry install
 ```
 
 - Then create necessary folders to host training data:
 
 ```bash
-cd ml-cat-project/ml_cat_project
+cd ml_cat_project
 mkdir dataset
 cd dataset
 mkdir cat
