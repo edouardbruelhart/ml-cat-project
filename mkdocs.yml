@@ -1,0 +1,54 @@
+site_name: ml-cat-project
+repo_url: https://github.com/edouardbruelhart/ml-cat-project
+site_url: https://edouardbruelhart.github.io/ml-cat-project
+site_description: A small toy project aiming to recognize cats on pictures.
+site_author: Edouard Brülhart
+edit_uri: edit/main/docs/
+repo_name: edouardbruelhart/ml-cat-project
+copyright: Maintained by <a href="https://edouardbruelhart.com">Florian</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append('../')
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/edouardbruelhart/ml-cat-project
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/ml-cat-project
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
