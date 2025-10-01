@@ -5,6 +5,7 @@ import torch.nn as nn
 import torchvision.models as models  # type: ignore[import-untyped]
 
 
+# Test codecov integration
 class SimpleNN(nn.Module):
     """
     Simple neural network using a pretrained ResNet18 backbone.
