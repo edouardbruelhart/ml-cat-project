@@ -20,4 +20,7 @@ class SimpleNN(nn.Module):
         self.backbone.fc = nn.Linear(self.backbone.fc.in_features, num_classes)
 
     def forward(self, x: torch.Tensor) -> Any:
+        """
+        Simple forward pass through the network.
+        """
         return self.backbone(x)

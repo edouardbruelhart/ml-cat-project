@@ -1,8 +1,7 @@
 # ------------------------------ Beginning of manual additions ------------------------------
 
 # Ignore dataset files as it can contain private data
-ml_cat_project/dataset/train/cat/*
-ml_cat_project/dataset/train/not_cat/*
+ml_cat_project/dataset
 
 # ------------------------------ End of manual additions ------------------------------------
 docs/source

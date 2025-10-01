@@ -26,6 +26,8 @@ poetry install
 cd ml_cat_project
 mkdir dataset
 cd dataset
+mkdir raw
+cd raw
 mkdir cat
 mkdir not_cat
 ```

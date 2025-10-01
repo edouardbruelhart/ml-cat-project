@@ -1,7 +1,6 @@
-# tests/test_predict.py
 import torch
 
-from ml_cat_project.src.model import SimpleNN  # your model class
+from ml_cat_project.src.model import SimpleNN
 from ml_cat_project.src.predict import class_names, predict_image
 
 
