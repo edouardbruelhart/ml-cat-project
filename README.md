@@ -6,36 +6,29 @@
 [![Commit activity](https://img.shields.io/github/commit-activity/m/edouardbruelhart/ml-cat-project)](https://img.shields.io/github/commit-activity/m/edouardbruelhart/ml-cat-project)
 [![License](https://img.shields.io/github/license/edouardbruelhart/ml-cat-project)](https://img.shields.io/github/license/edouardbruelhart/ml-cat-project)
 
-A small toy project aiming to recognize cats on pictures.
+A small Machine Learning toy project to learn ML principles. It aims to recognize cats on a picture.
 
 - **Github repository**: <https://github.com/edouardbruelhart/ml-cat-project/>
 - **Documentation** <https://edouardbruelhart.github.io/ml-cat-project/>
 
-## Getting started with your project
+## Getting started
 
-First, create a repository on GitHub with the same name as this project, and then run the following commands:
-
-```bash
-git init -b main
-git add .
-git commit -m "init commit"
-git remote add origin git@github.com:edouardbruelhart/ml-cat-project.git
-git push -u origin main
-```
-
-Finally, install the environment and the pre-commit hooks with
+- First clone the repository:
 
 ```bash
-make install
+git clone git@github.com:edouardbruelhart/ml-cat-project.git
 ```
 
-You are now ready to start development on your project!
-The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release.
+- Then create necessary folders to host training data:
 
-To finalize the set-up for publishing to PyPI or Artifactory, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/publishing/#set-up-for-pypi).
-For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/mkdocs/#enabling-the-documentation-on-github).
-To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/codecov/).
+```bash
+cd ml-cat-project/ml_cat_project
+mkdir dataset
+cd dataset
+mkdir cat
+mkdir not_cat
+```
 
----
+- Finally add at least 50 pictures containing cats in the cat folder and 50 pictures not containing cats in the not_cat folder. It's better to not duplicate pictures or add multiple similar pictures.
 
-Repository initiated with [fpgmaas/cookiecutter-poetry](https://github.com/fpgmaas/cookiecutter-poetry).
+## The rest is coming soon!
