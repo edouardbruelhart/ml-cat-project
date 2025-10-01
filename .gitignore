@@ -1,3 +1,10 @@
+# ------------------------------ Beginning of manual additions ------------------------------
+
+# Ignore dataset files as it can contain private data
+ml_cat_project/dataset/train/cat/*
+ml_cat_project/dataset/train/not_cat/*
+
+# ------------------------------ End of manual additions ------------------------------------
 docs/source
 
 # From https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
