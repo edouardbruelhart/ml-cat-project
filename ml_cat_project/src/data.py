@@ -1,8 +1,5 @@
-import os
-
-import torch
 import torchvision.transforms as transforms  # type: ignore[import-untyped]
-from torch.utils.data import DataLoader, TensorDataset
+from torch.utils.data import DataLoader
 from torchvision.datasets import ImageFolder  # type: ignore[import-untyped]
 
 
@@ -21,14 +18,6 @@ def get_dataloaders(data_dir: str = "ml_cat_project/dataset/raw", batch_size: in
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
     ])
-
-    if os.getenv("CI") == "true":  # running on GitHub Actions
-        # Create a tiny dummy dataset
-        X = torch.randn(16, 3, 224, 224)
-        y = torch.randint(0, 2, (16,))
-        dataset = TensorDataset(X, y)
-        loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
-        return loader, ["class0", "class1"]
 
     # Otherwise load real dataset
     dataset = ImageFolder(data_dir, transform=train_transform)
