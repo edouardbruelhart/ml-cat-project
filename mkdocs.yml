@@ -1,4 +1,4 @@
-site_name: ml-cat-project
+site_name: ML-cat-project
 repo_url: https://github.com/edouardbruelhart/ml-cat-project
 site_url: https://edouardbruelhart.github.io/ml-cat-project
 site_description: A small toy project aiming to recognize cats on pictures.
